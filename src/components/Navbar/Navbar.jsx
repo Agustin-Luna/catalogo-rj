@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Icon from '../../assets/iconoEstiloPast.png'
+import Icon from '../../../public/iconoEstiloPast.png'
 import ProductosDropdown from "./Dropdow/Dropdown.jsx";
 
 

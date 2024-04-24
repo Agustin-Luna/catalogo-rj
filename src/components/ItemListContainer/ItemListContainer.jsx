@@ -1,22 +1,33 @@
 import { useState, useEffect } from "react"
 import { pedirDatos } from "../../utils/utils"
+import ItemList from "../ItemList/ItemList.jsx"
+import { useParams } from "react-router-dom"
 
 
 
 const ItemListContainer = () => {
-    const [proroductos, setProductos] = useState([])
+    const [productos, setProductos] = useState([])
+    
+    const {categoryId} = useParams()
+    
+
 
         useEffect(() => {
             pedirDatos()
             .then((data) => {
-                setProductos(data)
+                const items = categoryId 
+                    ? data.filter(prod => prod.category === categoryId)
+                    : data
+                setProductos(items)
             })
-        }, [])
+        }, [categoryId])
 
 
 
     return (
         <>
+        <ItemList productos={productos}/>
+        
         </>
     )
 }

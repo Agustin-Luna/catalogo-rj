@@ -1,4 +1,4 @@
-import '../data/MOCK_DATA.json'
+import {MOCK_DATA} from '../data/MOCK_DATA'
 
 
 export const pedirDatos = () => {
