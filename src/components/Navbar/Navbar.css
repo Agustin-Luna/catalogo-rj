@@ -1,0 +1,159 @@
+
+.link-button {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #ff3b7d; 
+  color: #000; 
+  text-decoration: none; 
+  border: 1px solid transparent; 
+  border-radius: 4px; 
+  transition: background-color 0.3s ease; 
+  text-align: center; 
+}
+
+.link-button:hover {
+  background-color: #EC407A; 
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #EC407A; 
+  padding: 0 40px;
+  height: 100px;
+}
+
+nav > .logo {
+  width: 100px;
+  align-items: center;
+}
+
+.dropdowns {
+  display: flex;
+  align-self: stretch;
+}
+
+.dropdown {
+  position: relative;
+  padding: 20px;
+}
+
+.dropdown-inicio{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+  background-color: #EC407A;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.dropdown-button {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 8px;
+}
+
+.dropdown:hover {
+  background-color: #EC407A;
+  cursor: pointer;
+}
+
+.dropdown-button span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.dropdown-button i {
+  font-size: 14px;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  background-color: #EC407A; 
+  display: none;
+  z-index: 999;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgb(255, 130, 145);
+} 
+
+.btn-hamb{
+  display: none;
+}
+.hamburguesa{
+  height: 30px;
+  width: 30px;
+
+}
+
+/*aca comienza los estilos responsive*/
+@media (max-width: 910px) {
+  .btn-hamb{
+    display: flex;
+  }
+  .hamburguesa{
+    height: 30px;
+    width: 30px;
+  }
+
+  .dropdowns {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%; 
+    background-color: #EC407A;
+    transition: all 0.3s ease; 
+    z-index: 999;
+  }
+
+  .dropdowns.show {
+    display: flex;
+  }
+.dropdowns .dropdown{
+  display: flex;
+  justify-content: end;
+}
+
+  .dropdown-inicio {
+    margin-right: auto;
+    padding: 10px 20px;
+    width: 100%;
+    justify-content: end;
+    box-sizing: border-box;
+  }
+
+  .dropdown {
+    padding: 10px 20px; 
+    width: 100%; 
+    box-sizing: border-box; 
+  }
+
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #EC407A;
+    margin-top: 10px;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+}

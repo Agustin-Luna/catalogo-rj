@@ -1,24 +1,37 @@
 import { useEffect, useState } from "react"
-import { pedirDatos } from "../../utils/utils"
 import { useParams } from "react-router-dom"
-import ItemDetail from "../ItemDetail/ItemDetail"
+import ItemDetail from "../ItemDetail/ItemDetail.jsx"
+import { db } from "../../firebase/config.js"
+import { DocumentSnapshot, doc, getDoc } from "firebase/firestore"
 
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState(null)
+    const {itemId} = useParams()
 
-    const {itemId} = useParams
+
     useEffect(() => {
-        pedirDatos()
-        .then(data => {
-            setItem(data.find(prod => prod.id === Number(itemId)))
-        }, [])
-    })
+        // crear la ref
+        const docRef = doc( db, 'productos', itemId )
+        // llamar la ref
+        getDoc( docRef )
+            .then((docSnapshot) => {
+                const doc = {
+                    ...docSnapshot.data(),
+                    id: docSnapshot.id
+                }
+                setItem( doc )
+            })
+
+
+
+            }, []); 
+        
 
     return (
-        <div>
-            <ItemDetail item={item}/>
-        </div>
+        <>
+            {item && <ItemDetail item={item}/>}  
+        </>
     )
 }
 
