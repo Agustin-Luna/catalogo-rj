@@ -3,7 +3,8 @@ import ItemLIstContainer from './components/ItemListContainer/ItemListContainer.
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer.jsx";
 import Footer from "./components/Footer/Footer.jsx";
-import Navbar from "./components/Navbar/Navbar.jsx";
+import Navbar2 from "./components/Navbar/Navbar2.jsx";
+// import BasicExample from './components/Navbar/Navbar.jsx'
 // import Carrusel from "./components/Carousel/Carousel.jsx";
 
 
@@ -13,7 +14,7 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 const App = () => {
   return (
     <BrowserRouter>
-    <Navbar />
+    < Navbar2/> 
         <Routes>
           <Route path="/" element={<ItemLIstContainer/>}/>
           <Route path="/:categoryId" element={<ItemLIstContainer/>}/>

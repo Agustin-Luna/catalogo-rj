@@ -10,7 +10,7 @@ const ItemDetail = ({ item }) => {
       <div className="container m-auto mt-8 flex justify-between">
         {hasDescription ? (
           <>
-            <div className="grid grid-cols-2 gap-4 w-1/2 mr-10 ml-5" style={{ gridAutoRows: 'auto' }}>
+            <div className="grid grid-cols-2 gap-4 w-1/2 mr-10 ml-5"  style={{ gridAutoRows: 'auto' }}>
               {item.img.map((imagen, index) => (
                 <img
                   loading="lazy"
@@ -37,10 +37,11 @@ const ItemDetail = ({ item }) => {
               />
             ))}
           </div>
-        )}
+        )}  
       </div>
     </>
   );
 };
 
 export default ItemDetail;
+

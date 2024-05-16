@@ -7,7 +7,7 @@
   text-decoration: none; 
   border: 1px solid transparent; 
   border-radius: 4px; 
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;  
   text-align: center; 
 }
 
@@ -76,7 +76,7 @@ nav > .logo {
 .dropdown:hover > .dropdown-menu {
   display: flex;
   flex-direction: column;
-}
+} 
 
 .dropdown-menu {
   position: absolute;
@@ -95,11 +95,7 @@ nav > .logo {
 .btn-hamb{
   display: none;
 }
-.hamburguesa{
-  height: 30px;
-  width: 30px;
 
-}
 
 /*aca comienza los estilos responsive*/
 @media (max-width: 910px) {
@@ -142,18 +138,33 @@ nav > .logo {
   .dropdown {
     padding: 10px 20px; 
     width: 100%; 
+    height: auto;
     box-sizing: border-box; 
   }
 
   .dropdown-menu {
     display: none;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     background-color: #EC407A;
     margin-top: 10px;
-  }
+  } 
+.dropdown.active .dropdown-menu{
+  display: flex;
+}
+
+.dropdown.active .dropdown-menu {
+  display: flex;
+}
+.dropdown-button{
+  cursor: pointer;
+}
 
   .dropdown:hover .dropdown-menu {
     display: flex;
   }
+
+
+
+
 }
