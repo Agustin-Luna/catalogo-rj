@@ -11,7 +11,7 @@ const ItemCard = ({ item }) => {
         <h3 className="text-2xl font-semibold  overflow-hidden overflow-y-auto h-16 items-center w-auto flex justify-center ">{item.title}</h3>
         <hr />
         <div className="flex justify-center items-center ">
-        <Button className= "w-36 rounded-full bg-yellow-100 ">
+        <Button className= "w-36 rounded-ful ">
             <Link to={`/item/${item.id}`} className=" flex items-center justify-center w-full text-gray-700" >Ver Mas</Link>
         </Button>
         </div>

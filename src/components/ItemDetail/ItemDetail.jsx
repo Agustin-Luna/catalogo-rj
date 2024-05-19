@@ -6,42 +6,41 @@ const ItemDetail = ({ item }) => {
       <div className="flex justify-center m-10">
         <h3 className="text-3xl font-bold mb-2">{item.title}</h3>
       </div>
-      <hr />
-      <div className="container m-auto mt-8 flex justify-between">
+      <hr className="hidden md:block" /> {/* Oculta el hr en dispositivos móviles */}
+      <div className="container mx-auto mt-8 flex flex-col md:flex-row md:justify-center">
         {hasDescription ? (
           <>
-            <div className="grid grid-cols-2 gap-4 w-1/2 mr-10 ml-5"  style={{ gridAutoRows: 'auto' }}>
+            <div className="order-2 md:order-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-1/2 mx-5" style={{ gridAutoRows: 'auto' }}>
               {item.img.map((imagen, index) => (
                 <img
                   loading="lazy"
                   key={index}
                   src={imagen}
                   alt={`${item.title} - Imagen ${index + 1}`}
-                  className="w-full h-auto rounded"
+                  className="w-1/2 md:w-full h-auto rounded mx-auto" // Ajusta el ancho de las imágenes para móviles y pantallas grandes, centra horizontalmente
                 />
               ))}
             </div>
-            <div className="w-1/2 flex">
-              <div className="bg-gray-300 w-px h-full mx-4"></div>
-              <p className="text-xl font-semibold whitespace-pre-line">{item.description}</p>
+            <div className="hidden md:block bg-gray-300 w-px h-auto md:h-full mx-4"></div> {/* Línea divisoria en pantallas grandes */}
+            <div className="order-1 md:order-2 w-full md:w-1/2 flex flex-col items-center md:items-start mt-4 mb-10 md:mt-0 md:mb-0">
+              <p className="text-xl font-semibold whitespace-pre-line text-center md:text-left">{item.description}</p> {/* Centra el texto en mobile, a la izquierda en pantallas grandes */}
             </div>
           </>
         ) : (
-          <div className="grid grid-cols-4 gap-4 w-full mr-10 ml-5">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full mx-5">
             {item.img.map((imagen, index) => (
               <img
                 key={index}
                 src={imagen}
                 alt={`${item.title} - Imagen ${index + 1}`}
-                className="w-full h-auto rounded"
+                className="w-1/2 md:w-full h-auto rounded mx-auto" // Ajusta el ancho de las imágenes para móviles y pantallas grandes, centra horizontalmente
               />
             ))}
           </div>
-        )}  
+        )}
       </div>
     </>
   );
 };
 
 export default ItemDetail;
-
