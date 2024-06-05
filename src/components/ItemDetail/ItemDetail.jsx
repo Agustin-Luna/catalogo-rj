@@ -17,7 +17,7 @@ const ItemDetail = ({ item }) => {
                   key={index}
                   src={imagen}
                   alt={`${item.title} - Imagen ${index + 1}`}
-                  className="w-1/2 md:w-full h-auto rounded mx-auto" // Ajusta el ancho de las imágenes para móviles y pantallas grandes, centra horizontalmente
+                  className="w-3/4 md:w-auto h-auto rounded mx-auto" // Cambiar el tamaño y centrar en pantallas pequeñas
                 />
               ))}
             </div>
@@ -27,14 +27,15 @@ const ItemDetail = ({ item }) => {
             </div>
           </>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full mx-5">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full mx-5">
             {item.img.map((imagen, index) => (
-              <img
-                key={index}
-                src={imagen}
-                alt={`${item.title} - Imagen ${index + 1}`}
-                className="w-1/2 md:w-full h-auto rounded mx-auto" // Ajusta el ancho de las imágenes para móviles y pantallas grandes, centra horizontalmente
-              />
+              <div key={index} className="w-full flex justify-center">
+                <img
+                  src={imagen}
+                  alt={`${item.title} - Imagen ${index + 1}`}
+                  className="w-3/4 md:w-auto h-auto rounded mx-auto" // Cambiar el tamaño y centrar en pantallas pequeñas
+                />
+              </div>
             ))}
           </div>
         )}

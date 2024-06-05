@@ -14,7 +14,7 @@ const Navbar = () => {
   };
   const handleMenu = () =>{
     setAbrirMenu(!abrirMenu)
-    console.log(handleMenu)
+    (handleMenu)
   }
 
 

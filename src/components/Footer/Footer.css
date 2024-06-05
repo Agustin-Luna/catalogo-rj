@@ -1,4 +1,5 @@
-footer{
+/* Estilos para todas las pantallas */
+footer {
     display: flex;
     height: 60px;
     justify-content: space-evenly;
@@ -10,13 +11,13 @@ footer{
     width: 100%;
 }
 
-.titulo-footer{
+.titulo-footer {
     align-items: center;
     font-size: 1.5rem;
     font-weight: 500;
 }
 
-.footer-ul{
+.footer-ul {
     display: flex;
     gap: .625rem;
     font-size: 1.5rem;
@@ -24,40 +25,39 @@ footer{
     margin-right: 1rem;
     align-items: center;
 }
-.footer-svg{
+
+.footer-svg {
     width: 35px;
     height: 35px;
     color: black;
     align-items: center;
-
 }
 
+/* Estilos solo para pantallas móviles */
 @media(max-width: 700px) {
-    footer{
+    footer {
         display: flex;
         height: auto;
         flex-direction: column;
         text-align: center;
-        position: relative;
+        position: relative; /* Cambiamos la posición a relativa */
     }
 
-    .titulo-footer{
-    text-align: center;
-    margin-bottom: 10px;
-}
-.footer-ul > .footer-li{
-    width: 100%;
-}
+    .titulo-footer {
+        text-align: center;
+        margin-bottom: 10px;
+    }
 
-.footer-svg{
-    display: flex;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-}
+    .footer-ul > .footer-li {
+        width: 100%;
+    }
 
-
-
+    .footer-svg {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+    }
 }
