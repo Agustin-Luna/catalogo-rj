@@ -1,5 +1,5 @@
 import ItemCard from "../ItemCard/ItemCard"
-
+import BtnWsp from "../../utils/BotonWhatsapp/BtnWsp";
 
 
 const ItemList = ({ productos }) => {
@@ -10,7 +10,10 @@ const ItemList = ({ productos }) => {
 
             <div className="flex flex-wrap justify-center gap-10 m-10 items-center">
                 {productos.map((item) => (
-                    <ItemCard key={item.id} item={item} /> // La clave debe estar aquí
+                    <>
+                    <ItemCard key={item.id} item={item} /> 
+                    <BtnWsp/>
+                    </>
                 ))}
             </div>
         </section>

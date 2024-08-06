@@ -1,3 +1,5 @@
+import BtnWsp from "../../utils/BotonWhatsapp/BtnWsp";
+
 const ItemDetail = ({ item }) => {
   const hasDescription = item.description && item.description.trim() !== '';
 
@@ -40,7 +42,9 @@ const ItemDetail = ({ item }) => {
           </div>
         )}
       </div>
-    </>
+
+      <BtnWsp/>
+      </>
   );
 };
 
