@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    font-family: "Noto Serif Dogra", serif;
+    font-weight: 400;
+    outline: 1px solid red !important;
+}
 body{
     background-color: #FAF0E6;
 }
+
+

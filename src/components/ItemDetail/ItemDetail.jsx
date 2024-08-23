@@ -13,14 +13,14 @@ const ItemDetail = ({ item }) => {
       <div className="container mx-auto mt-8 flex flex-col md:flex-row md:justify-center">
         {hasDescription ? (
           <>
-            <div className="order-2 md:order-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-1/2 mx-5" style={{ gridAutoRows: 'auto' }}>
+            <div className="order-2 md:order-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-auto md:w-1/2 mx-5" style={{ gridAutoRows: 'auto' }}>
               {item.img.map((imagen, index) => (
                 <img
                   loading="lazy"
                   key={index}
                   src={imagen}
                   alt={`${item.title} - Imagen ${index + 1}`}
-                  className="w-3/4 md:w-auto h-auto rounded mx-auto" // Cambiar el tamaño y centrar en pantallas pequeñas
+                  className="w-3/4 md:w-3/4 h-auto rounded mx-auto " // Cambiar el tamaño y centrar en pantallas pequeñas
                 />
               ))}
             </div>
@@ -36,15 +36,16 @@ const ItemDetail = ({ item }) => {
                 <img
                   src={imagen}
                   alt={`${item.title} - Imagen ${index + 1}`}
-                  className="w-3/4 md:w-auto h-auto rounded mx-auto" // Cambiar el tamaño y centrar en pantallas pequeñas
+                  className="w-3/4 md:w-3/4 h-auto rounded mx-auto" // Cambiar el tamaño y centrar en pantallas pequeñas
                 />
               </div>
             ))}
           </div>
         )}
       </div>
-
-      <BtnWsp/>
+        <div className="md:flex mr-4"> 
+      <BtnWsp  />
+        </div>
       </>
   );
 };

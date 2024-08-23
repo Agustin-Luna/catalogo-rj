@@ -58,8 +58,8 @@ const Navbar = () => {
           <div className={`dropdown-menu ${activeDropdown === 3 ? 'active' : ''}`}>
             <Link to="/san-valentin" className="link-button" onClick={closeMenu}>San Valentín</Link>
             <Link to="/pascuas" className="link-button" onClick={closeMenu}>Pascuas</Link>
-            <Link to="/dia-del-padre" className="link-button" onClick={closeMenu}>Día del Padre</Link>
-            <Link to="/dia-de-la-madre" className="link-button" onClick={closeMenu}>Día de la Madre</Link>
+            {/* <Link to="/dia-del-padre" className="link-button" onClick={closeMenu}>Día del Padre</Link>
+            <Link to="/dia-de-la-madre" className="link-button" onClick={closeMenu}>Día de la Madre</Link> */}
             <Link to="/navidad" className="link-button" onClick={closeMenu}>Navidad</Link>
             <Link to="/anio-nuevo" className="link-button" onClick={closeMenu}>Año Nuevo</Link>
           </div>
@@ -67,7 +67,7 @@ const Navbar = () => {
 
         <div className="dropdown">
           <button className="dropdown-button" onClick={() => toggleDropdown(4)}>
-            <span>Mesa Dulce</span>
+            <span>Postres y Petitte Four</span>
             <i className={`bi bi-chevron-down ${activeDropdown === 4 ? 'active' : ''}`}></i>
           </button>
           <div className={`dropdown-menu ${activeDropdown === 4 ? 'active' : ''}`}>
