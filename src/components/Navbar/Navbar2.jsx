@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import Icon from '../../assets/iconoEstiloPast.png';
 import './Navbar2.css';
 
 const Navbar = () => {
@@ -22,7 +21,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <img src={Icon} alt="icono-svg" className="logo" />
+      <img src="https://firebasestorage.googleapis.com/v0/b/estilo-pastelero.appspot.com/o/iconoEstiloPast.png?alt=media&token=9f205047-d305-4a5e-90b1-6c898fe76517" alt="icono-svg" className="logo" />
       <div className={`dropdowns ${menuOpen ? 'show' : ''}`}>
         <Link to="/" className="dropdown-inicio" onClick={closeMenu}>Inicio</Link>
         

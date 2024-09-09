@@ -1,0 +1,18 @@
+.image-container{
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.image-zoom{
+    width: 300px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.image-zoom:hover{
+    transform: scale(1.8);
+    transition: 2s;
+}
