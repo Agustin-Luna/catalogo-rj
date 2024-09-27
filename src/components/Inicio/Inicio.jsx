@@ -8,7 +8,6 @@ const Inicio = () => {
     <>
       <div className='container-bienvenida'>
         <h1 className='title-bienvenida'>bienvenidos a estilo pastelero </h1>
-        <p className='parrafo-bienvenida'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio suscipit odit voluptates ipsum eligendi voluptas tenetur minima, libero reiciendis dolorem placeat assumenda facilis recusandae doloribus officia dolor molestias accusantium molestiae.</p>
       </div>
 
       <h1 className='category-title'>Categorias más solicitadas</h1>
