@@ -8,6 +8,10 @@ const Inicio = () => {
     <>
       <div className='container-bienvenida'>
         <h1 className='title-bienvenida'>bienvenidos a estilo pastelero </h1>
+        <span className='container-description'>
+        <img src="https://firebasestorage.googleapis.com/v0/b/estilo-pastelero.appspot.com/o/mica-foto.jpeg?alt=media&token=9900e867-02cb-49d5-a101-ace8d3b24315" alt="foto-duenia-estPastelero"  className='foto-duenia'/>
+        <p className='parrafo-bienvenida'>Holaa! Esta soy Yo. Me llamo Mica🦋.<br /> En mi página podrán encontrar todos los productos que ofrezco, Saludos.</p>
+        </span>
       </div>
 
       <h1 className='category-title'>Categorias más solicitadas</h1>
